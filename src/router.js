@@ -4,6 +4,7 @@ import About from "./views/About.vue";
 import LinkTree from "./views/LinkTree.vue";
 
 //DEVELOPMENT PROJECTS
+import progress from "./views/Projects/progress.vue";
 import arro from "./views/Projects/arro.vue";
 import SonicPi_Tools from "./views/Projects/midi_boilerplate.vue";
 import VJ_Setup from "./views/Projects/TD_VJ_Setup.vue";
@@ -53,6 +54,11 @@ const routes = [
     path: "/TD_VJ_Setup",
     name: "VJ_Setup",
     component: VJ_Setup,
+  },
+  {
+    path: "/progress",
+    name: "progress",
+    component: progress,
   },
   //DESIGN
   {

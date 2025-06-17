@@ -8,6 +8,13 @@ const projects = ref([
   //DEVELOPMENT
   {
     categories: ["DEVELOPMENT"],
+    title: "Progress",
+    currentProjectView: "/progress",
+    imagePath: "/bg_images/dev_4.jpg",
+    tag: ["#Application", "#Electron"],
+  },
+  {
+    categories: ["DEVELOPMENT"],
     title: "arro.at",
     currentProjectView: "/arro.at",
     imagePath: "/bg_images/dev_1.jpg",
@@ -31,6 +38,13 @@ const projects = ref([
   //DESIGN WORK
   {
     categories: ["DESIGN WORK"],
+    title: "Portfolio PDF",
+    currentProjectView: "/pdf_portfolio",
+    imagePath: "/bg_images/des_4.jpg",
+    tag: ["#Different", "#Stuff"],
+  },
+  {
+    categories: ["DESIGN WORK"],
     title: "808club.at",
     currentProjectView: "/808club.at",
     imagePath: "/bg_images/des_1.jpg",
@@ -50,13 +64,7 @@ const projects = ref([
     imagePath: "/bg_images/des_3.jpg",
     tag: ["#Poster", "#Flyer"],
   },
-  {
-    categories: ["DESIGN WORK"],
-    title: "Portfolio PDF",
-    currentProjectView: "/pdf_portfolio",
-    imagePath: "/bg_images/des_4.jpg",
-    tag: ["#Different", "#Stuff"],
-  },
+
 
   //AUDIO VISUAL
   {
@@ -78,7 +86,7 @@ const projects = ref([
     title: "808Spotlight",
     currentProjectView: "/808Spotlight",
     imagePath: "/bg_images/av_3.jpg",
-    tag: ["#SonicPi", "#EP", "#Tekno"],
+    tag: ["#Deep Space", "#AEC", "#TD"],
   },
 ]);
 

@@ -19,14 +19,8 @@
 ---
 
 #### To Do
+- Pre Render (SEO)
+- Maybe scale up website max-width (currently only 1000px)
+- Add more projects lol 
+- Fix image naming
 
-- [ ] Default theme depending on daytime
-
-  - [ ] night -> dark
-  - [ ] day -> light
-
-- [ ] Make projectcards better (Short description etc...)
-
-- [ ] Compress Images & Improve Chunking
-
-- [ ] Implement Image Placeholder

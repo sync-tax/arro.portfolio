@@ -21,43 +21,46 @@ import Image from "../components/Image.vue";
 
     <section class="aboutDetails">
       <Collapsible title="Things I love">
-        <h4>Creative Coding</h4>
-        <p>generative visuals with TD & algorithmic sound with SP</p>
+        <h4>Coding Stuff</h4>
+        <p>visuals, audio, apps, websites & more</p>
 
-        <h4>Prints</h4>
-        <p>screenprinted shirts, stickers and all that good stuff</p>
+        <h4>Printing Stuff</h4>
+        <p>screenprinting shirts, patches & whatnot</p>
 
-        <h4>Pokémon</h4>
-        <p>pure nostalgia - the ROM-hacks are the best tho</p>
+        <h4>Drawing Stuff</h4>
+        <p>scribbling okayish looking doodles</p>
 
-        <h4>Cats</h4>
+        <h4>Fluffy Stuff</h4>
         <p>I have two cats - basically my children</p>
 
-        <h4>Techno</h4>
-        <p>best spirit - even better sound</p>
+        <h4>Utz Utz Sound</h4>
+        <p>getting me in trance on the dancefloor</p>
       </Collapsible>
 
       <Collapsible title="Technologies">
         <h4>Programming</h4>
-        <p>Javascript(Vue), Java, Python, Ruby, GLSL</p>
+        <p>JS, TS, Python, Java, Ruby, GLSL(?)</p>
+
+        <h4>Frameworks</h4>
+        <p>Vue.js, Electron, SASS</p>
 
         <h4>Realtime-Graphics</h4>
         <p>Touchdesigner</p>
 
         <h4>2D-Graphics</h4>
-        <p>Photoshop, Illustrator, Procreate</p>
+        <p>Affinity Suite, Photoshop, Illustrator</p>
 
         <h4>3D-Graphics</h4>
         <p>Blender</p>
 
         <h4>Video</h4>
-        <p>DaVinci Resolve, OBS, Premiere</p>
+        <p>DaVinci Resolve, OBS</p>
 
         <h4>Audio</h4>
         <p>SonicPi, Ableton</p>
 
         <h4>UX/UI-Design</h4>
-        <p>Xd, Figma</p>
+        <p>Figma</p>
       </Collapsible>
 
       <Collapsible title="Portfolio">

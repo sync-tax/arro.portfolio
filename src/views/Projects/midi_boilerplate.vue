@@ -128,8 +128,7 @@ end
         <h4>Metronome</h4>
         <p>
           Syncing to it enables playing around with sleep values without getting
-          out of sync. - MIDI Scale Function: Remap the default MIDI control
-          range to your desired range.
+          out of sync.
         </p>
         <h4>Pattern Function</h4>
         <p>

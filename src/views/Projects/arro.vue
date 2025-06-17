@@ -25,9 +25,9 @@ import Image from "../../components/Image.vue";
       <Collapsible title="Overview">
         <h4>About</h4>
         <p>
-          "arro" is a shorthand for my name - Ardeleanu Robert. This portfolio
-          is a work in progress, and I’ll continue to expand it as I grow my
-          skills and develop new projects.
+          This portfolio is a work in progress, and I’ll continue to expand it
+          as I grow my skills and develop new projects. <br />
+          "arro" is a shorthand for my name.
         </p>
 
         <h4>Tech</h4>
@@ -37,6 +37,24 @@ import Image from "../../components/Image.vue";
           - THREE <br />
           - Vite <br />
           - Netlify
+        </p>
+      </Collapsible>
+      <Collapsible title="Features">
+        <h4>Current</h4>
+        <p>
+          - Project Filter <br />
+          - Light & Dark Mode <br />
+          - Collapsibles <br />
+          - NJAN Easter Egg <br />
+          - THREE interactive Hero <br />
+          - Responsive Design
+        </p>
+        <h4>Future Updates</h4>
+        <p>
+          - Multilayer filter (as project base grows and diversifies) <br />
+          - Prerendered pages (SEO) <br />
+          - Contact Form <br />
+          - ...
         </p>
       </Collapsible>
       <Collapsible title="Resources">
