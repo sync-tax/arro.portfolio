@@ -65,6 +65,13 @@ body {
   border-right: 1px solid var(--border-color);
   background-color: var(--background-color);
 }
+@media (max-width: 1000px) {
+  body {
+    max-width: 100%;
+    border-left: none;
+    border-right: none;
+  }
+}
 
 .projectNav {
   border-top: 0.5px solid #383838;
@@ -89,9 +96,14 @@ body {
   border: 1px solid #383838;
   font-size: 1.1rem;
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   .projectNav li {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 360px) {
+  .projectNav li {
+    font-size: 0.8rem;
   }
 }
 .projectNav li:hover {
@@ -336,9 +348,14 @@ body {
   height: 500px;
   filter: var(--logo-filter);
 }
-@media (max-width: 506px) {
+@media (max-width: 900px) {
   .headerContainer {
-    height: 200%;
+    height: 350px;
+  }
+}
+@media (max-width: 600px) {
+  .headerContainer {
+    height: 200px;
   }
 }
 .headerContainer canvas {
@@ -375,6 +392,12 @@ body {
   .headerContainer .herowrapper img,
   .headerContainer .herowrapper h2 {
     font-size: 3.4rem;
+  }
+}
+@media (max-width: 360px) {
+  .headerContainer .herowrapper img,
+  .headerContainer .herowrapper h2 {
+    font-size: 2rem;
   }
 }
 .headerContainer .herowrapper h5 {
@@ -601,6 +624,7 @@ nav #logoImage {
   width: 27px;
   height: 27px;
   margin-left: 15px;
+  margin-top: 5px;
   opacity: 100%;
   filter: var(--logo-filter);
 }
@@ -634,7 +658,12 @@ nav ul .navLink {
 }
 @media (max-width: 506px) {
   nav ul .navLink {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 420px) {
+  nav ul .navLink {
+    font-size: 0.8rem;
   }
 }
 nav ul .navLink:hover {
@@ -644,16 +673,10 @@ nav ul #lastNavLink {
   /* border-right: 1px solid #b3b3b3;
     padding-right: 20px; */
 }
-@media (max-width: 506px) {
-  nav ul #lastNavLink {
-    border: none;
-    margin-right: 0px;
-  }
-}
 nav ul .modeSwitch {
   cursor: pointer;
   margin-right: 20px;
-  margin-top: 3px;
+  margin-top: 5px;
   width: 25px;
   height: 25px;
 }
@@ -662,20 +685,27 @@ nav ul .modeSwitch:hover {
 }
 @media (max-width: 506px) {
   nav ul .modeSwitch {
-    display: none;
+    width: 22px;
+    height: 22px;
   }
 }
-nav ul img {
+@media (max-width: 420px) {
+  nav ul .modeSwitch {
+    width: 20px;
+    height: 20px;
+  }
+}
+nav ul .modeSwitch img {
   opacity: 50%;
 }
-nav ul img :hover {
+nav ul .modeSwitch img :hover {
   opacity: 100%;
 }
-nav ul .dark {
+nav ul .modeSwitch .dark {
   opacity: var(--dark-opa);
   filter: var(--svg-filter);
 }
-nav ul .light {
+nav ul .modeSwitch .light {
   opacity: var(--light-opa);
   filter: var(--svg-filter);
 }
@@ -723,8 +753,16 @@ nav ul .light {
 }
 @media (max-width: 778px) {
   .project .projectOverview .textProjectContent h2 {
-    text-align: center;
-    font-size: 2.5rem;
+    text-align: left;
+    font-size: 3rem;
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 35px;
+  }
+}
+@media (max-width: 440px) {
+  .project .projectOverview .textProjectContent h2 {
+    font-size: 2.25rem;
   }
 }
 .project .projectOverview .textProjectContent p {
@@ -740,7 +778,12 @@ nav ul .light {
 }
 @media (max-width: 778px) {
   .project .projectOverview .textProjectContent p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    text-align: left;
+    width: 92%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
   }
 }
 .project .projectOverview .mainProjectContent {
@@ -765,7 +808,7 @@ nav ul .light {
   margin-top: 30px;
   width: 60%;
 }
-@media (max-width: 600px) {
+@media (max-width: 778px) {
   .project .projectOverview .mainProjectContent img {
     width: 90%;
   }

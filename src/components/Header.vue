@@ -16,9 +16,9 @@ import StarBG from "./StarBG.vue";
       <h5 class="hero glitch layers" data-text="程式和設計">
         <span>code_design_art</span>
       </h5>
-      <h6 class="hero glitch layers" data-text="程式和設計">
+      <!--<h6 class="hero glitch layers" data-text="程式和設計">
         <span>開發設計</span>
-      </h6>
+      </h6>-->
     </div>
   </div>
 </template>

@@ -59,10 +59,10 @@ const projects = ref([
   },
   {
     categories: ["DESIGN WORK"],
-    title: "Event Posters",
+    title: "Poster & Flyer",
     currentProjectView: "/event_posters",
     imagePath: "/bg_images/des_3.jpg",
-    tag: ["#Poster", "#Flyer"],
+    tag: ["#Affinity", "#AdobeCC"],
   },
 
 

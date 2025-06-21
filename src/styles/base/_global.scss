@@ -26,4 +26,10 @@ body {
   border-right: 1px solid var(--border-color);
 
   background-color: var(--background-color);
+
+  @media (max-width: 1000px) {
+    max-width: 100%;
+    border-left: none;
+    border-right: none;
+  }
 }

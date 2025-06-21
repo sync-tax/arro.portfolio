@@ -5,16 +5,28 @@ const nyanCat = ref(null);
 
 const htmlElement = document.documentElement;
 
+const currentTheme = ref(localStorage.getItem("theme") || "dark");
+
 const applyLightmode = () => {
   htmlElement.classList.add("lightmode");
   htmlElement.classList.remove("darkmode");
   localStorage.setItem("theme", "light");
+  currentTheme.value = "light";
 };
 
 const applyDarkmode = () => {
   htmlElement.classList.add("darkmode");
   htmlElement.classList.remove("lightmode");
   localStorage.setItem("theme", "dark");
+  currentTheme.value = "dark";
+};
+
+const toggleTheme = () => {
+  if (currentTheme.value === "dark") {
+    applyLightmode();
+  } else {
+    applyDarkmode();
+  }
 };
 
 onMounted(() => {
@@ -29,8 +41,8 @@ onMounted(() => {
           () => {
             nyanCat.value.classList.remove("flyAnim");
           },
-          { once: true }
-        ); // Use { once: true } to remove the listener after one execution
+          { once: true } // remove listener after 1 execution
+        );
       }
     });
   }
@@ -85,14 +97,14 @@ onMounted(() => {
         alt="A moon icon - used to switch to darkmode."
         style="fill: white"
         class="modeSwitch dark"
-        @click="applyDarkmode"
+        @click="toggleTheme"
       />
       <img
         title="Wait. This is illegal."
         src="../assets/images/lightmode_icon.svg"
         alt="A sun icon - used to switch to lightmode."
         class="modeSwitch light"
-        @click="applyLightmode"
+        @click="toggleTheme"
       />
     </ul>
   </nav>
@@ -102,4 +114,5 @@ onMounted(() => {
 .router-link-active {
   opacity: 100%;
 }
+
 </style>

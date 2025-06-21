@@ -30,8 +30,11 @@
 
     font-size: 1.1rem;
 
-    @media (max-width: 450px) {
-      font-size: 1.1rem;
+    @media (max-width: 470px) {
+      font-size: .9rem;
+    }
+    @media (max-width: 360px) {
+      font-size: .8rem;
     }
 
     &:hover {

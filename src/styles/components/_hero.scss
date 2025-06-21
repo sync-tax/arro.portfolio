@@ -10,8 +10,13 @@
 
   filter: var(--logo-filter);
 
-  @media (max-width: 506px) {
-    height: 200%;
+
+  @media (max-width: 900px) {
+    height: 350px;
+  }
+
+  @media (max-width: 600px) {
+    height: 200px;
   }
 
   canvas {
@@ -32,6 +37,7 @@
       padding-bottom: 50px;
     }
 
+
     span {
       color: white;
     }
@@ -48,6 +54,9 @@
 
       @media (max-width: 600px) {
         font-size: 3.4rem;
+      }
+      @media (max-width: 360px) {
+        font-size: 2rem;
       }
     }
 
