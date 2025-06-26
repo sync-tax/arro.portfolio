@@ -7,6 +7,8 @@ const htmlElement = document.documentElement;
 
 const currentTheme = ref(localStorage.getItem("theme") || "dark");
 
+const menuOpen = ref(false);
+
 const applyLightmode = () => {
   htmlElement.classList.add("lightmode");
   htmlElement.classList.remove("darkmode");
@@ -27,6 +29,10 @@ const toggleTheme = () => {
   } else {
     applyDarkmode();
   }
+};
+
+const toggleMenu = () => {
+  menuOpen.value = !menuOpen.value;
 };
 
 onMounted(() => {
@@ -68,34 +74,49 @@ onMounted(() => {
       />
     </div>
 
-    <RouterLink to="/" class="navLink">
+    <div class="logoContainer">
+      <RouterLink to="/" class="navLink">
       <img
         src="../assets/images/logo2.svg"
         alt="A monochrome logo resembling the initials AR."
         id="logoImage"
       />
     </RouterLink>
-
-    <ul>
-      <img
+    <img
         src="../assets/images/nyan_button.png"
-        alt="A moon icon - used to switch to darkmode."
+        alt="NYAN Button"
         id="nyan"
       />
-      <RouterLink to="/" class="navLink">
+    </div>
+    
+
+    <img
+      src="../assets/images/menu_icon.svg"
+      alt="Menu Icon"
+      id="menu"
+      @click="toggleMenu"
+      :style="{ opacity: menuOpen ? '100%' : '30%' }"
+    />
+
+    <ul :class="{ 'mobile-active': menuOpen }">
+
+
+      <div class="navItemsContainer">
+
+      <RouterLink to="/" class="navLink" @click="toggleMenu">
         <li>PROJΞCTS</li>
       </RouterLink>
-      <RouterLink to="/About" class="navLink">
+      <RouterLink to="/About" class="navLink" @click="toggleMenu">
         <li>ΛBOUT</li>
       </RouterLink>
-      <RouterLink to="/LinkTree" class="navLink">
+      <RouterLink to="/LinkTree" class="navLink" @click="toggleMenu">
         <li id="lastNavLink">LIΠKS</li>
       </RouterLink>
 
-      <img
+      <div class="modeSwitchContainer">
+        <img
         src="../assets/images/darkmode_icon.svg"
         alt="A moon icon - used to switch to darkmode."
-        style="fill: white"
         class="modeSwitch dark"
         @click="toggleTheme"
       />
@@ -106,6 +127,8 @@ onMounted(() => {
         class="modeSwitch light"
         @click="toggleTheme"
       />
+      </div>
+    </div>
     </ul>
   </nav>
 </template>
@@ -114,5 +137,7 @@ onMounted(() => {
 .router-link-active {
   opacity: 100%;
 }
+
+
 
 </style>

@@ -606,14 +606,20 @@ body {
   border-right: 2px solid var(--border-color);
   padding-right: 20px;
 }
+@media (max-width: 506px) {
+  #lastNavLink {
+    padding-right: 0;
+    border-right: none;
+  }
+}
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
   border-bottom: 1px solid var(--border-color);
   background: var(--background-color);
   position: sticky;
@@ -625,6 +631,7 @@ nav #logoImage {
   height: 27px;
   margin-left: 15px;
   margin-top: 5px;
+  z-index: 1000;
   opacity: 100%;
   filter: var(--logo-filter);
 }
@@ -637,9 +644,58 @@ nav h2 {
   padding-left: 20px;
   padding-top: 10px;
 }
+nav #menu {
+  display: none;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 0px;
+  width: 40px;
+  height: 40px;
+  filter: var(--svg-filter);
+}
+@media (max-width: 506px) {
+  nav #menu {
+    display: block;
+  }
+}
 nav ul {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 506px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    top: 50px;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    background: var(--background-color);
+    border-bottom: 2px solid var(--border-color);
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-150%);
+  }
+}
+nav ul .navItemsContainer {
+  display: flex;
+}
+@media (max-width: 506px) {
+  nav ul .navItemsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+  }
+}
+@media (max-width: 506px) {
+  nav ul .navItemsContainer .modeSwitchContainer {
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+  }
 }
 nav ul li {
   list-style: none;
@@ -647,7 +703,8 @@ nav ul li {
 }
 @media (max-width: 506px) {
   nav ul li {
-    margin-right: 20px;
+    font-size: 2rem;
+    padding-top: 20px;
   }
 }
 nav ul .navLink {
@@ -669,10 +726,6 @@ nav ul .navLink {
 nav ul .navLink:hover {
   opacity: 100%;
 }
-nav ul #lastNavLink {
-  /* border-right: 1px solid #b3b3b3;
-    padding-right: 20px; */
-}
 nav ul .modeSwitch {
   cursor: pointer;
   margin-right: 20px;
@@ -680,34 +733,40 @@ nav ul .modeSwitch {
   width: 25px;
   height: 25px;
 }
-nav ul .modeSwitch:hover {
-  opacity: 100%;
-}
 @media (max-width: 506px) {
   nav ul .modeSwitch {
-    width: 22px;
-    height: 22px;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 }
-@media (max-width: 420px) {
-  nav ul .modeSwitch {
-    width: 20px;
-    height: 20px;
-  }
-}
-nav ul .modeSwitch img {
-  opacity: 50%;
-}
-nav ul .modeSwitch img :hover {
-  opacity: 100%;
-}
-nav ul .modeSwitch .dark {
+nav ul .dark {
   opacity: var(--dark-opa);
   filter: var(--svg-filter);
+  transition: opacity 0.15s ease;
 }
-nav ul .modeSwitch .light {
+nav ul .dark:hover {
+  opacity: 100%;
+}
+nav ul .light {
   opacity: var(--light-opa);
   filter: var(--svg-filter);
+  transition: opacity 0.15s ease;
+}
+nav ul .light:hover {
+  opacity: 100%;
+}
+
+.mobile-active {
+  transform: translateY(0%);
+}
+
+#nyan {
+  cursor: pointer;
+  position: absolute;
+  left: 60px;
+  top: 7px;
 }
 
 .project a {
@@ -926,14 +985,17 @@ nav ul .modeSwitch .light {
   font-size: 1.2rem;
   font-size: 1rem;
 }
-@media (max-width: 645px) {
+@media (max-width: 590px) {
   .footer .footerWrapper .footerExtra p {
-    display: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
   }
 }
 .footer .footerWrapper .footerExtra .nyanUnlock {
   font-size: 0.9rem;
   cursor: pointer;
+  padding-top: 0px;
   opacity: 60%;
 }
 .footer .footerWrapper .footerExtra .nyanUnlock:hover {
